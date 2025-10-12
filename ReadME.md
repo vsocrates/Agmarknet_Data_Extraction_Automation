@@ -2,13 +2,13 @@
 
 This project automates the download of agricultural market data (Agmarknet) using **Playwright** and **Python**.
 
-## 🚀 Features
+## Features
 - Automatically opens Agmarknet URLs for multiple commodities and date ranges  
 - Exports and saves Excel files automatically  
 - Logs failed downloads in a separate CSV  
 - Organizes downloads by commodity and date  
 
-## 🗂️ Project Structure
+## Project Structure
 Agmarknet_Data_Extraction/
 │
 ├── download_agmark_excel.py          ← Single commodity automation
@@ -20,7 +20,7 @@ Agmarknet_Data_Extraction/
 └── requirements.txt                   ← Python dependencies
 
 
-## ⚙️ Setup
+## Setup
 
 1. **Install dependencies**
    ```bash
@@ -32,7 +32,7 @@ Agmarknet_Data_Extraction/
 
 3. The downloaded Excel files will appear in the downloads_agmark/ folder.
 
-🧩 **CSV Inputs**
+   **CSV Inputs**
 - commodities.csv → Contains commodity names and codes
 - dates.csv → Contains FromDate and ToDate columns
 
