@@ -1,4 +1,4 @@
-# Agmark Data Automation
+# Agmark Data  Exatraction Automation
 
 This project automates the download of agricultural market data (Agmarknet) using **Playwright** and **Python**.
 
@@ -8,16 +8,28 @@ This project automates the download of agricultural market data (Agmarknet) usin
 - Logs failed downloads in a separate CSV  
 - Organizes downloads by commodity and date  
 
-## Project Structure
-Agmarknet_Data_Extraction/
+## Project Folder Structure
+Agmark Data  Exatraction Automation/
+
 │
-├── download_agmark_excel.py          ← Single commodity automation
-├── commodities.csv                   ← Commodity name & code list
-├── dates.csv                          ← Date ranges for download
-├── downloads_agmark/                  ← Downloaded Excel files
-├── failed_downloads.csv               ← Failed download log
-├── README.md                          ← Project documentation
-└── requirements.txt                   ← Python dependencies
+
+├── download_agmark_excel.py
+
+├── Commodity.csv
+
+├── DateRange.csv
+
+├── failed_downloads.csv
+
+├── downloads_agmark/
+
+│   ├── Apple_01-Jan-2018_to_31-Mar-2018.xls
+
+│   ├── Banana_01-Jan-2018_to_31-Mar-2018.xls
+
+│   └── ...
+
+└── README.md
 
 
 ## Setup
@@ -33,8 +45,8 @@ Agmarknet_Data_Extraction/
 3. The downloaded Excel files will appear in the downloads_agmark/ folder.
 
    **CSV Inputs**
-- commodities.csv → Contains commodity names and codes
-- dates.csv → Contains FromDate and ToDate columns
+- commodities.csv → Edit names and codes of commodity from available list in Agmarket detail excel file, Commodity sheet
+- dates.csv → Contains FromDate and ToDate columns(Edit according to the requirement)
 
 ## Notes
 - If a file fails to download, details are saved in failed_downloads.csv.
@@ -56,3 +68,6 @@ Agmarknet_Data_Extraction/
 - Aggregated data provides insights into agricultural market dynamics.  
 - Historical trends support evidence-based policy formulation.  
 - Market analysis helps identify areas requiring intervention or support.
+
+## Documentation
+A detailed step-by-step procedure of this project is attached separately. Please refer to it for installation, setup, and usage instructions.-Agmarknet_Data_Automation
