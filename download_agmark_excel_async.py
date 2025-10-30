@@ -7,7 +7,7 @@ from playwright.async_api import async_playwright
 BASE_URL = "https://agmarknet.gov.in/SearchCmmMkt.aspx"
 DOWNLOAD_DIR = Path("downloads_agmark")
 FAILED_CSV = "failed_downloads.csv"
-CONCURRENCY = 3  # ← run 5 at a time
+CONCURRENCY = 5  # ← run 5 at a time
 
 DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -91,7 +91,7 @@ async def main():
     semaphore = asyncio.Semaphore(CONCURRENCY)
 
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False)
+        browser = await p.chromium.launch(headless=True)
 
         tasks = [
             fetch_one(p, browser, job, semaphore)
