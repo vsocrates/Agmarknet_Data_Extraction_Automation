@@ -17,7 +17,7 @@ dates = pd.read_csv("dates.csv")               # FromDate,ToDate
 failed_rows = []
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(headless=False)
+    browser = p.chromium.launch(headless=True)
     context = browser.new_context(accept_downloads=True)
     page = context.new_page()
 
@@ -43,15 +43,15 @@ with sync_playwright() as p:
             )
 
             try:
-                page.goto(url, timeout=120000)
+                page.goto(url, timeout=240000)
 
                 # Wait until Excel button appears
-                page.wait_for_selector("#cphBody_ButtonExcel", timeout=60000)
+                page.wait_for_selector("#cphBody_ButtonExcel", timeout=240000)
 
                 # Download Excel
                 print("📥 Clicking 'Export To Excel'...")
-                with page.expect_download() as download_info:
-                    page.click("#cphBody_ButtonExcel")
+                with page.expect_download(timeout=240000) as download_info:
+                    page.click("#cphBody_ButtonExcel", timeout=240000)
 
                 download = download_info.value
                 filename = f"{commodity_name}_{from_date}_to_{to_date}.xls"
