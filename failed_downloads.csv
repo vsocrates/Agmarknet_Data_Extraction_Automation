@@ -1,5 +1,0 @@
-CommodityName,CommodityCode,FromDate,ToDate,Error
-Cotton,15,1-Jan-18,31-Apr-18,"Page.wait_for_selector: Timeout 120000ms exceeded.
-Call log:
-  - waiting for locator(""#cphBody_ButtonExcel"") to be visible
-"
