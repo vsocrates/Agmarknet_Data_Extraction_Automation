@@ -257,4 +257,5 @@ $RECYCLE.BIN/
 # data folders
 downloads_agmark/
 excel_agmark/
+failed_downloads.csv
 *.zip
